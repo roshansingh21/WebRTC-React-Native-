@@ -2,11 +2,11 @@ import React, {Component} from 'react'
 import {Text, View, TouchableOpacity, TextInput, ScrollView, ListView} from 'react-native'
 import {mediaDevices, RTCIceCandidate, RTCPeerConnection, RTCSessionDescription, RTCView, RTCSetting} from 'react-native-webrtc';
 let otherUsername = null;
-let localStream
+let localStream;
 let sendChannel;
 let receiveChannel;
 
-const ws = new WebSocket('ws://192.168.0.111:8080')
+const ws = new WebSocket('ws://192.168.0.127:8080')
 ws.onopen = () => {
     console.log('Connected to the signaling server')
 }
